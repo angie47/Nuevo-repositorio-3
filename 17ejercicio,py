@@ -1,0 +1,26 @@
+# Ejercicio n17
+# Función para calcular el índice de masa corporal (IMC)
+def calcular_imc(peso_kg, estatura_m):
+    """
+    Calcula el IMC utilizando la fórmula IMC = peso (kg) / estatura (m)^2.
+    
+    Parámetros:
+    peso_kg: Peso de la persona en kilogramos.
+    estatura_m: Estatura de la persona en metros.
+    
+    Devuelve:
+    El IMC de la persona.
+    """
+    return round(peso_kg / estatura_m**2, 2)
+
+# Solicita al usuario su peso en kilogramos
+peso_usuario = float(input("¿Cuál es tu peso en kg? "))
+
+# Solicita al usuario su estatura en metros
+estatura_usuario = float(input("¿Cuál es tu estatura en metros?"))
+
+# Calcula el IMC del usuario utilizando la función 'calcular_imc'
+imc_usuario = calcular_imc(peso_usuario, estatura_usuario)
+
+# Muestra el IMC del usuario
+print("Tu índice de masa corporal es " + str(imc_usuario))
